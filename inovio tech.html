@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inovi.css">
+    <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', ''],
+          ['Jan',  0,      0],
+          ['Feb',  100,      0],
+          ['March',  100,       0],
+          ['April',  400,      0],
+          ['may',  300,      0],
+          ['June',  100,      0],
+          ['July',  0,      0]
+        ]);
+
+        var options = {
+          title: 'Data Base',
+          hAxis: {title: 'Month',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+ 
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript">
+   google.charts.load("current", {packages:["corechart"]});
+   google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+     var data = google.visualization.arrayToDataTable([
+       ['Task', 'Hours per Day'],
+       ['Blue',     11],
+       ['Red',      2],
+       ['Yellow',  2],
+       ['Green', 2],
+       ['Purple',    7]
+     ]);
+
+     var options = {
+       title: 'Pie Data Base',
+       pieHole: 0.4,
+     };
+
+     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+     chart.draw(data, options);
+   }
+ </script>
+     <script>
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+      
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Opening Move', 'Percentage'],
+          ["King's pawn (e4)", 44],
+          ["Queen's pawn (d4)", 31],
+          ["Knight to King 3 (Nf3)", 12],
+          ["Queen's bishop pawn (c4)", 10],
+          ['Other', 3]
+        ]);
+
+        var options = {
+          title: 'Totals Ratio',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'Totals Ratio',
+                   subtitle: 'popularity by percentage' },
+          bars: 'Vertical', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'bottom', label: 'Percentage'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+   </script>
+</head>
+<body class="body1">
+    <Section class="flex-container">
+        <div class="logo"> 
+            <span class="logo-1">
+                <img src="logo pre1.jpg" alt="">
+            </span>
+        </div>
+        <div class="search-box">
+            <form class="d-flex" role="search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                </form>
+        </div>
+        </Section>
+    <hr>
+    <div class="sidebar">
+        <a href="#"> <img src="images.png" class="dash-1" alt=""><i class="Dash-a"></i> Dashboard</a>
+        <a href="#"> <img src="chat.png" class="dash-1" alt=""><i class="Dash-a"></i> Chats</a>
+        <a href="#"> <img src="visitors.png" class="dash-1" alt=""><i class="Dash-a"></i> Visitors</a>
+        <a href="#"> <img src="payment.png" class="dash-1" alt=""><i class="Dash-a"></i> Payments</a>
+        <a href="#"> <img src="department.png" class="dash-1" alt=""><i class="Dash-a"></i> Department</a>
+        <a href="#"> <img src="mail box.png" class="dash-1" alt=""><i class="Dash-a"></i> Mail Box</a>
+        <a href="#"> <img src="user.png" class="dash-1" alt=""><i class="Dash-a"></i> User</a>
+        <a href="#"> <img src="lead.png" class="dash-1" alt=""><i class="Dash-a"></i> Leads</a>
+        <a href="#"> <img src="brand.png" class="dash-1" alt=""><i class="Dash-a"></i> Brand</a>
+        <a href="#"> <img src="invoice.png" class="dash-1" alt=""><i class="Dash-a"></i> Invoices</a>
+        <a href="#"> <img src="customer.png" class="dash-1" alt=""><i class="Dash-a"></i> Customer</a>
+        <a href="#"> <img src="employee.png" class="dash-1" alt=""><i class="Dash-a"></i> Employees</a>
+        <a href="#"> <img src="HR.png" class="dash-1" alt=""><i class="Dash-a"></i> Hr</a>
+        <a href="#"> <img src="merchant.png" class="dash-1" alt=""><i class="Dash-a"></i> Merchant</a>
+
+      </div>
+      
+      <div class="main">
+        <section class="first-1">
+        <div class="grid-container">
+        <div class="monthly-lead">
+            <p>2,02,150 <br> Monthly Lead</p>
+            <img class="mm-1" src="monthly lead.png" alt="">
+        </div>
+        <div class="monthly-customer">
+            <p> 8940 <br> Monthly Cusomer</p>
+            <img class="mm-2" src="employee.png" alt="">
+        </div>
+        <div class="monthly-revenue">
+            <p> 8940 <br> Monthly revnue</p>
+            <img class="mm-3" src="revenue11.png" alt="">
+        </div>
+        <div class="monthly-Brand">
+            <p> 8940 <br> Monthly Brand</p>
+            <img class="mm-4" src="monthly brands.png" alt="">
+        </div>
+        </div>            
+        </section>
+        <section class="revenue">
+            <div class="renue-line">
+                <h1 class="r-l">Revenue</h1>
+            </div>
+            <div class="grid-sec">
+                <span class="grid-graph-1 " id="chart_div"></span>
+                <span class="grid-graph-2 " id="donutchart"></span>
+            </div>
+        </section>
+        <section class="project">
+          <div class="renue-line">
+            <h1 class="r-l">Projects</h1>
+            <div class="grid-container">
+              <div class="total-project">
+                  <p>62,150 <br> Total Project</p>
+                  <img class="mn-1" src="monthly brands.png" alt="">
+              </div>
+              <div class="total-project">
+                  <p> 8940 <br> Monthly Cusomer</p>
+                  <img class="mn-1" src="employee.png" alt="">
+              </div>
+              <div class="total-project">
+                  <p> 8940 <br> Monthly revnue</p>
+                  <img class="mn-1" src="revenue11.png" alt="">
+              </div>
+              <div class="total-project">
+                  <p> 8940 <br> Monthly Brand</p>
+                  <img class="mn-1" src="monthly brands.png" alt="">
+                  <div class="total-project">
+                    <p> 8940 <br> Monthly Cusomer</p>
+                    <img class="mn-1" src="employee.png" alt="">
+                </div>
+               
+        </section>
+        <div class="recent-project">
+          <h2 class="mmm-1">Recent project list</h2>
+          <div class="search-1 ">
+            <input type="text" placeholder="Search.." name="search">
+            <input type="text" placeholder="Russia.." name="search">
+            <input type="text" placeholder="Last 30 days.." name="search">
+          </div>
+          <section class="table">
+          <Table class="tablle" border="1px solid black" >
+            <tr class="headiii">
+              <th>#NO</th>
+              <th>Project Name</th>
+              <th>Date & Time</th>
+              <th>Remaining Amount</th>
+              <th>Paid Amount </th>
+              <th>Status</th>
+
+            </tr>
+            <tr class="tt1">
+              <hr>
+              <th class="tt1">01</th>
+              <th class="tt1">Abdul Sami</th>
+              <th class="tt1">22 May 2022, 1:30 AM</th>
+              <th class="tt1">$5500</th>
+              <th class="tt1">$4500</th>
+              <th class="tt1">Fhgd</th>
+            </tr>
+            <tr class="tt1">
+              <th>02</th>
+              <th>Abdul Sami</th>
+              <th>22 May 2022, 1:30 AM</th>
+              <th>$5500</th>
+              <th>$4500</th>
+              <th>Fhgd</th>
+            </tr>
+            <tr class="tt1">
+              <th>03</th>
+              <th>Abdul Sami</th>
+              <th>22 May 2022, 1:30 AM</th>
+              <th>$5500</th>
+              <th>$4500</th>
+              <th>Fhgd</th>
+            </tr>
+            <tr class="tt1">
+            <th>04</th>
+            <th>Abdul Sami</th>
+            <th>22 May 2022, 1:30 AM</th>
+            <th>$5500</th>
+            <th>$4500</th>
+            <th>Fhgd</th>
+            </tr>
+          </Table>
+          </section>
+          <section class="project">
+            <h1 class="r-l">Customer Section</h1>
+            <div class="grid-container">
+              <div class="total-project1">
+                  <p>62,150 <br> Total Project</p>
+                  <img class="mn-1" src="monthly brands.png" alt="">
+              </div>
+              <div class="total-project1">
+                  <p> 8940 <br> Monthly Cusomer</p>
+                  <img class="mn-1" src="employee.png" alt="">
+              </div>
+              <div class="total-project1">
+                  <p> 8940 <br> Monthly revnue</p>
+                  <img class="mn-1" src="revenue11.png" alt="">
+              </div>
+              <div class="total-project1">
+                  <p> 8940 <br> Monthly Brand</p>
+                  <img class="mn-1" src="monthly brands.png" alt="">
+                  <div class="total-project1">
+                    <p> 8940 <br> Monthly Cusomer</p>
+                    <img class="mn-1" src="employee.png" alt="">
+                </div>
+        
+          </section>
+          
+          <table class="tablle" border="1px solid black">
+            <tr class="headiii">
+              <th>#NO</th>
+              <th>Project-Name</th>
+              <th>Date & Time</th>
+              <th>Remaining Amount</th>
+              <th>Paid Amount</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <th>01</th>
+              <th>Front-End</th>
+              <th>15 May 2022, 5:45AM</th>
+              <th>$ 50</th>
+              <th>$50</th>
+              <th>Half</th>
+            </tr>
+            <tr>
+              <th>02</th>
+              <th>Front-End</th>
+              <th>15 May 2022, 5:45AM</th>
+              <th>$ 50</th>
+              <th>$50</th>
+              <th>Half</th>
+            </tr>
+            <tr>
+              <th>03</th>
+              <th>Front-End</th>
+              <th>15 May 2022, 5:45AM</th>
+              <th>$ 50</th>
+              <th>$50</th>
+              <th>Half</th>
+            </tr>
+            <tr>
+              <th>04</th>
+              <th>Front-End</th>
+              <th>15 May 2022, 5:45AM</th>
+              <th>$ 50</th>
+              <th>$50</th>
+              <th>Half</th>
+            </tr>
+          </table>
+          <section style="margin: auto;">
+            <div class="graph"  id="top_x_div" style="height: 30rem; margin:30px 50px; background-color: ;"></div>
+          </div>  
+          </section>
+
+</div>
+</body>
+</html>
